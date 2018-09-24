@@ -80,11 +80,13 @@ def main():
 	k = input("Number of colors for posterized image: ")
 
 	# read image from user 
-	path = "data"
+	path = ""
 	full_fn = os.path.join(path, imgFile)
 	img = cv.imread(full_fn)
 	# posterize image
 	posImg = posterize(img, k)
+	posName= (os.path.splitext(imgFile)[0]) + "Posterized.jpg" # creates filename
+	cv.imwrite(os.path.join(results_dir, posName), posImg) # saves side by side file
 
 	#creates image that has the original image and the posterized images side by side
 	sideComp = ImgComb(img, posImg)
