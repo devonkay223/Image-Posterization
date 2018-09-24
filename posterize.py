@@ -1,5 +1,5 @@
 """
-Author      : Yi-Chieh Wu, <your names here>
+Author      : Yi-Chieh Wu, Devon Frost
 Class       : HMC CS 121
 Date        : 2018 Sep 13
 Description : Posterize image
@@ -71,7 +71,7 @@ def ImgComb (ogimg, posimg):
 def main():
 	### ========== TODO : START ========== ###
 	#create results images folder
-	results_dir = os.path.join("data/results")
+	results_dir = os.path.join("results")
 	if not os.path.exists(results_dir):
 		 os.mkdir(results_dir)
 	
